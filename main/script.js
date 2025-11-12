@@ -65,7 +65,7 @@ const products = [
   },
 
   {
-    id: 5,
+    id: 6,
     serie: "14",
     name: "iPhone 14 plus",
     description: "El plus mi hermano",
@@ -79,7 +79,7 @@ const products = [
   
 
   {
-    id: 6,
+    id: 7,
     serie: "14",
     name: "iPhone 14 Pro",
     description: "Dynamic Island, A16 Bionic y cámara de 48MP.",
