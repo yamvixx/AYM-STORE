@@ -186,3 +186,36 @@ document.addEventListener("DOMContentLoaded", () => {
   const yearEl = document.getElementById("year");
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 });
+
+// ===============================
+// 📱 Formulario “Vende tu iPhone” (envío a WhatsApp)
+// ===============================
+document.getElementById("sendBtn")?.addEventListener("click", () => {
+  const nombre = document.getElementById("nombre").value.trim();
+  const modelo = document.getElementById("modelo").value.trim();
+  const almacenamiento = document.getElementById("almacenamiento").value;
+  const color = document.getElementById("color").value;
+  const estado = document.getElementById("estado").value;
+  const precio = document.getElementById("precio").value.trim();
+  const detalles = document.getElementById("detalles").value.trim();
+
+  const numero = "51971156911"; // Tu WhatsApp
+
+  if (!nombre || !modelo || !almacenamiento || !color || !estado) {
+    alert("Por favor completa todos los campos obligatorios.");
+    return;
+  }
+
+  let mensaje = `📱 *Solicitud de venta de iPhone*\n\n`;
+  mensaje += `👤 *Nombre:* ${nombre}\n`;
+  mensaje += `📲 *Modelo:* ${modelo}\n`;
+  mensaje += `💾 *Almacenamiento:* ${almacenamiento}\n`;
+  mensaje += `🎨 *Color:* ${color}\n`;
+  mensaje += `✨ *Estado físico:* ${estado}\n`;
+  if (precio) mensaje += `💰 *Precio deseado:* S/ ${precio}\n`;
+  if (detalles) mensaje += `📝 *Detalles:* ${detalles}\n\n`;
+  mensaje += `Enviado desde el formulario de *AYM STORE*`;
+
+  const url = `https://wa.me/${numero}?text=${encodeURIComponent(mensaje)}`;
+  window.open(url, "_blank");
+});
