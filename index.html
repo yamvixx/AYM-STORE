@@ -1,0 +1,77 @@
+<!-- File: index.html -->
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>AYM • STORE</title>
+  <link rel="stylesheet" href="style/style.css" />
+  <link rel="icon" href="data:," />
+</head>
+<body>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="#">AYM • STORE</a>
+    <button id="btn-menu" class="menu-btn" aria-label="Abrir menú">
+      <span class="hamburger"></span>
+    </button>
+
+    <nav id="nav" class="nav">
+      <ul>
+        <li><a href="#productos">Productos</a></li>
+        <li><a href="paginas/nosotros.html">Nosotros</a></li>
+        <li><a href="paginas/contacto.html">Contacto</a></li>
+                <li><a href="paginas/vendemetuiphone.html">Vendeme tu Iphone</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="container hero-inner">
+      <div class="hero-copy">
+        <h1>Sin tanto floro te mereces este Iphone</h1>
+        <p>Nuestra coleccion para ti</p>
+        <a class="btn-primary" href="#productos">Ver productos</a>
+      </div>
+<div class="hero-image" aria-hidden="true">
+  <div class="logo-circle">
+    <img src="imagenes/logo.jpg" alt="Logo AYM STORE" />
+  </div>
+</div>
+
+    </div>
+  </section>
+
+<section id="productos" class="productos container">
+  <h2>Productos destacados</h2>
+  <p class="muted">Selecciona un grado para ver los precios. Diseño minimalista y responsivo.</p>
+
+  <h3 class="serie-title">Serie 12</h3>
+  <div id="serie12" class="grid"></div>
+
+  <h3 class="serie-title">Serie 13</h3>
+  <div id="serie13" class="grid"></div>
+
+  <h3 class="serie-title">Serie 14</h3>
+  <div id="serie14" class="grid"></div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div>
+      <strong>AYM • STORE</strong>
+      <div class="muted">🌱 Manzanas frescas todos los días.</div>
+    </div>
+    <div class="right">
+      <div class="muted">© <span id="year"></span> AYM • STORE</div>
+    </div>
+  </div>
+</footer>
+
+<script src="main/script.js"></script>
+</body>
+</html>

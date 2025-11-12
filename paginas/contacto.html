@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contacto — AYM • STORE</title>
+  <link rel="stylesheet" href="../style/style.css" />
+  <link rel="icon" href="data:," />
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="#">AYM • STORE</a>
+    <button id="btn-menu" class="menu-btn" aria-label="Abrir menú">
+      <span class="hamburger"></span>
+    </button>
+
+    <nav id="nav" class="nav">
+      <ul>
+        <li><a href="#productos">Productos</a></li>
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="vendemetuiphone.html">Vendeme tu Iphone</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="container contacto-section">
+  <h1>Contáctanos por WhatsApp</h1>
+  <p class="muted">Completa tus datos y te responderemos lo antes posible 📱</p>
+
+  <form id="whatsapp-form" class="contact-form" onsubmit="return false;">
+    <input type="text" id="nombre" placeholder="Tu nombre" required />
+
+    <select id="asunto" required>
+      <option value="" disabled selected>Selecciona el motivo del mensaje</option>
+      <option value="Consulta de producto">🛒 Consulta de producto</option>
+      <option value="Cotización o precio">💰 Cotización o precio</option>
+      <option value="Disponibilidad de modelos">📱 Disponibilidad de modelos</option>
+      <option value="Otro">📩 Otro</option>
+    </select>
+
+    <textarea id="mensaje" rows="4" placeholder="Escribe tu mensaje aquí..." required></textarea>
+    <button class="btn-primarys" id="sendBtn">Enviar mensaje por WhatsApp</button>
+  </form>
+
+  <div>
+    <h3>O contáctanos directamente:</h3>
+    <p>📞 WhatsApp: <a href="https://wa.me/51971156911" target="_blank">+51 971 156 911</a></p>
+    <p>📸 Instagram: <a href="https://instagram.com/aymstore" target="_blank">@aymstore</a></p>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div>
+      <strong>AYM • STORE</strong>
+      <div class="muted">🌱 Manzanas frescas todos los días.</div>
+    </div>
+    <div class="right">
+      <div class="muted">© <span id="year"></span> AYM • STORE</div>
+    </div>
+  </div>
+</footer>
+
+<script>
+document.getElementById("year").textContent = new Date().getFullYear();
+
+document.getElementById("sendBtn").addEventListener("click", () => {
+  const nombre = document.getElementById("nombre").value.trim();
+  const asunto = document.getElementById("asunto").value;
+  const mensaje = document.getElementById("mensaje").value.trim();
+
+  if (!nombre || !asunto || !mensaje) {
+    alert("Por favor completa todos los campos.");
+    return;
+  }
+
+  // ✅ Tu número de WhatsApp (sin + ni espacios)
+  const telefono = "51971156911";
+
+  // 📩 Mensaje con formato profesional
+  const texto = `👋 *¡Gracias por contactar con AYM STORE!*%0A
+🧍‍♂️ Nombre: ${nombre}%0A
+📌 Motivo: ${asunto}%0A
+💬 Mensaje:%0A${mensaje}%0A
+───────────────────────%0A`;
+
+  // Abre WhatsApp con el mensaje formateado
+  window.open(`https://wa.me/${telefono}?text=${texto}`, "_blank");
+});
+</script>
+ <script src="../main/script.js"></script>
+</body>
+</html>

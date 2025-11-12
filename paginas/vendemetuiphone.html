@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Vende tu iPhone — AYM • STORE</title>
+  <link rel="stylesheet" href="../style/style.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="#">AYM • STORE</a>
+    <button id="btn-menu" class="menu-btn" aria-label="Abrir menú">
+      <span class="hamburger"></span>
+    </button>
+
+    <nav id="nav" class="nav">
+      <ul>
+        <li><a href="#productos">Productos</a></li>
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="vendemetuiphone.html">Vendeme tu Iphone</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+  <main class="container">
+    <form class="sell-form" id="sellForm">
+      <h1>Vende tu iPhone</h1>
+      <p class="muted" style="text-align:center;margin-bottom:20px;">Completa los datos de tu iPhone y te responderemos por WhatsApp 📲</p>
+
+      <input type="text" id="nombre" placeholder="Tu nombre completo" required />
+      <input type="text" id="modelo" placeholder="Modelo (ej: iPhone 12, 13 Pro...)" required />
+      <select id="almacenamiento" required>
+        <option value="">Almacenamiento</option>
+        <option>64GB</option>
+        <option>128GB</option>
+        <option>256GB</option>
+        <option>512GB</option>
+      </select>
+      <select id="color" required>
+        <option value="">Color</option>
+        <option>Negro</option>
+        <option>Blanco</option>
+        <option>Azul</option>
+        <option>Dorado</option>
+        <option>Rojo</option>
+        <option>Otro</option>
+      </select>
+      <select id="estado" required>
+        <option value="">Estado físico</option>
+        <option>Excelente (como nuevo)</option>
+        <option>Bueno (pequeños detalles)</option>
+        <option>Regular (rayones o desgaste)</option>
+      </select>
+      <input type="text" id="precio" placeholder="Precio que deseas (S/)" />
+      <textarea id="detalles" rows="4" placeholder="Detalles adicionales o fallas"></textarea>
+      <button type="button" id="sendBtn">Enviar por WhatsApp</button>
+    </form>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div><strong>AYM • STORE</strong><div class="muted">Compra y venta de iPhones</div></div>
+      <div class="muted">© <span id="year"></span> AYM • STORE</div>
+    </div>
+  </footer>
+
+  <script src="../main/script.js"></script>
+</body>
+</html>
